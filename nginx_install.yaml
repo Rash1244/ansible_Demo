@@ -3,10 +3,10 @@
   hosts: all
   become: true
   tasks:
-    - name: ensure nginx is at the latest version
+    - name: Install the NGINX application on localhost
       apt:
         name: nginx
-        state: latest
+        state: present
     - name: start nginx
       service:
         name: nginx
